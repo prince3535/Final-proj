@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container{
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 30px;
+  }
+  
+  h1{
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  
+  form div{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+  }
+  
+  .label, form div input{
+    font-size: 1.3rem;
+  }
+  
+  .label {
+    transform: translateY(100%) scale(0.9) translateX(-20px);
+    transition: 0.2s linear;
+    position: relative;
+    opacity: 0.7;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1rem;
+  }
+  
+  .label-up{
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  
+  .leave-down{
+    transform: translateY(0);
+  }
+  
+  
+  form div input{
+    height: 2rem;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000;
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 25px;
+    outline: none;
+    font-size: 1.3rem;
+    padding: 2px;
+    color: rgba(0,0,0,0.7)
+  }
+  
+  form div button{
+    margin: 20px 20%;
+    font-size: 1rem;
+    padding: 8px 0;
+    border: none;
+    transition: 0.2s ease-in;
+  }
+  
+  form div button:hover{
+    background-color: rgb(197, 197, 197);
+    cursor: pointer;
+  }
+  
+  form div small{
+    font-size: 1rem;
+    border: none;
+    text-align: center;
+    color: rgb(35, 168, 242);
+  }
+  
+  .auth-btn{
+    text-align: center;
+  }
+
+  .btn{
+    display: block;
+    padding: 8px 12px;
+    background-color: crimson;
+    color: white;
+    border:none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .btn:hover{
+    border:2px crimson solid;
+    color:crimson;
+    background: transparent;
+  }
+  .signup-btn{
+    padding: 8px 12px;
+    background-color: crimson;
+    color: white;
+    border:none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .signup-btn:hover{
+    border:2px crimson solid;
+    color:crimson;
+    background: transparent;
+  }
+  .before-login{
+    width: 600px;
+  }
+  .cred-info:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .signin-err{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+    color: crimson;
+  }
+  .signup-err{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+    color: crimson;
+  }
+  .acc-create{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+    color: green;
+  }
+
+  .usr-info h3{
+    font-weight: 800;
+    text-transform: capitalize;
+    margin: 4% 0% 3% 0%;
+  }
+
+  .signout-a{
+    display: block;
+    margin-top: 4%;
+    text-align: end;
+  }
+/* table style */
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+  table-layout: fixed;
+  font-size: 16px;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
